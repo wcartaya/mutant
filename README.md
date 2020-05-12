@@ -1,9 +1,6 @@
 # Mutant
 Proyecto que detecta si un humano es mutante basándose en su secuencia de ADN
 
-[TOC]
-
-
 ## Enunciado:
 Magneto quiere reclutar la mayor cantidad de mutantes para poder luchar
 contra los X-Men.
@@ -38,6 +35,7 @@ Hay que desarrollar el algoritmo de la manera más eficiente posible.
 > }
 > En caso de verificar un mutante, debería devolver un HTTP 200-OK, en caso contrario un
 > 403-Forbidden
+
 > Opcional 3:
 > Anexar una base de datos, la cual guarde los ADN’s verificados con la API.
 > Solo 1 registro por ADN.
@@ -50,9 +48,10 @@ Hay que desarrollar el algoritmo de la manera más eficiente posible.
 - Framework .Net Core 3
 - Lenguaje C#
 - ORM Entity Framework Core & Dapper
-- Control de Versiones: GitHub.
+- Control de Versiones: GitHub
 - Base de Datos: Azure SQL Database
 - Servidor de aplicaciones: Azure App Services
+- Tests: Xunit
 - Documentación de la API: Swagger
 
 ## Arquitectura
