@@ -40,7 +40,7 @@ Hay que desarrollar el algoritmo de la manera más eficiente posible.
 > Anexar una base de datos, la cual guarde los ADN’s verificados con la API.
 > Solo 1 registro por ADN.
 > Exponer un servicio extra “/stats” que devuelva un Json con las estadísticas de las
-> verificaciones de ADN: {“count_mutant_dna”:40, “count_human_dna”:100: “ratio”:0.4}
+> verificaciones de ADN: {“count_mutant_dna” : 40, “count_human_dna” : 100: “ratio” : 0.4}
 > Tener en cuenta que la API puede recibir fluctuaciones agresivas de tráfico (Entre 100 y 1
 > millón de peticiones por segundo).
 
@@ -93,7 +93,7 @@ Los diferentes métodos de búsqueda de secuencias se implementaron siguiento el
 
 ### Stats
 Para agilizar la consulta en la base de datos se utiliza el micro ORM Dapper, ya que es muy liviando y rápido. Es cierto que no oferece toda la funcionalidad y robustez que EntityFramework Core pero para aspectos puntuales cómo éste suele ser mas efectivo.
-También se implementó Cache InMemory, para una respuesta mucho más rápida. El manejo de cache hay que configurarlo adecuadamente dependiendo del requerimiento de uso real.
+También se implementó Cache InMemory, para una respuesta mucho más rápida. El manejo de cache hay que configurarlo adecuadamente dependiendo del requerimiento de uso real. Para mejorar la performance se puede implementar una BD NoSQl de acceso rápido sólo para consultar éstas estadísticas.
 
 ## API
 La documentación de la API está disponible en:  [/mutants-dev-as/swagger](https://mutants-dev-as.azurewebsites.net/swagger).
