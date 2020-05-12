@@ -91,6 +91,7 @@ Para buscar las secuencias oblicuas se recorre sólo la mitad de la primera fila
 
 ### Stats
 Para agilizar la consulta en la base de datos se utiliza el micro ORM Dapper, ya que es muy liviando y rápido. Es cierto que no oferece toda la funcionalidad y robustez que EntityFramework Core pero para aspectos puntuales cómo éste suele ser mas efectivo.
+También se implementó Cache InMemory, para una respuesta mucho más rápida. El manejo de cache hay que configurarlo adecuadamente dependiendo del requerimiento de uso real.
 
 ## API
 La documentación de la API está disponible en:  [/mutants-dev-as/swagger](https://mutants-dev-as.azurewebsites.net/swagger).
