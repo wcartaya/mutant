@@ -88,6 +88,9 @@ Para buscar las secuencias oblicuas se recorre sólo la mitad de la primera fila
 
 ![Imagen Diagonales](https://github.com/wcartaya/mutant/blob/master/readme/diagonales.png)
 
+Los diferentes métodos de búsqueda de secuencias se implementaron siguiento el patrón de diseño strategy, dada la diferencia de comportamiento en cada tipo de línea.
+![Imagen Strategy](https://github.com/wcartaya/mutant/blob/master/readme/strategy.png)
+
 ### Stats
 Para agilizar la consulta en la base de datos se utiliza el micro ORM Dapper, ya que es muy liviando y rápido. Es cierto que no oferece toda la funcionalidad y robustez que EntityFramework Core pero para aspectos puntuales cómo éste suele ser mas efectivo.
 También se implementó Cache InMemory, para una respuesta mucho más rápida. El manejo de cache hay que configurarlo adecuadamente dependiendo del requerimiento de uso real.
