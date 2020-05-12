@@ -10,7 +10,7 @@
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
-    <DocumentationFile>C:\repos\Mutants\Mutants\Mutants.API\API.xml</DocumentationFile>
+    <DocumentationFile>C:\repos\mutant\Mutants.API\API.xml</DocumentationFile>
   </PropertyGroup>
 
   <ItemGroup>
