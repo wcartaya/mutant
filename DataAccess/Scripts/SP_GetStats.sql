@@ -22,7 +22,7 @@ count(*) as total
 FROM Dnas
 )
 select count_mutant_dna, count_human_dna,
-CAST(CAST(count_mutant_dna as float) / CAST(count_human_dna as float) as DECIMAL(2,2))as ratio
+CAST(CAST(count_mutant_dna as float) / CAST(count_human_dna as float) as DECIMAL(36,2))as ratio
 from cte
 
 END

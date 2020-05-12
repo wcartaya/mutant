@@ -18,9 +18,6 @@ namespace Mutants.Business.Mutant
     /// <response bool>True or False</response> 
     public class DnaValidator
     {
-        
-        private int countAllSecuences;
-
         /// <summary>
         /// Realiza llamadas de manera simultanea a diferentes tareas para validar si encuentra secuencia de 4 letras seguidas iguales
         /// </summary>
