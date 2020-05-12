@@ -1,0 +1,39 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>API</name>
+    </assembly>
+    <members>
+        <member name="M:Mutants.Controllers.MutantsController.Post(Mutants.Business.Dtos.DnaDto)">
+            <summary>
+            Valida si un humano es mutante por su cadena de adn
+            </summary>
+            <remarks>
+            Se recibe un arreglo de string que representa cada fila de una tabla (NxN) con la secuencia de ADN.
+            Las letras de los Strings solo pueden ser: (A,T,C,G) que representan cada base nitrogenada del ADN.
+            Se sabe si un humano es mutante, si se encuentra más de una secuencia de cuatro letras iguales ,
+             de forma oblicua, horizontal o vertical.
+            </remarks>
+            <param name="dna">Arreglo de string que representa el adn (6x6).
+            Ejemplo: 
+            {
+            "dna":["ATGGGA","CAGTGC","TTATGT","AGAAGG","CCCCTA","TCACTG"]
+            }
+            </param>
+            <response code="403">Forbidden. No es mutante.</response>              
+            <response code="200">Ok. Es mutante.</response>        
+            <response code="400">BadRequest. Formato del objeto incorrecto.</response>
+        </member>
+        <member name="M:API.Controllers.StatsController.All">
+            <summary>
+            Estadísticas de las verificaciones de ADN
+            </summary>
+            <remarks>
+            count_mutant_dna: cantidad de mutantes
+            count_human_dna: cantidad de humanos
+            ratio: proporción entre mutantes y humanos
+            </remarks>
+            <response code="200">Ejemplo de respuesta: {“count_mutant_dna”:40, “count_human_dna”:100: “ratio”:0.4}</response>
+        </member>
+    </members>
+</doc>

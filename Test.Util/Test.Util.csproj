@@ -1,0 +1,15 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Folder Include="Stub\Entitys\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Dtos\Dtos.csproj" />
+  </ItemGroup>
+
+</Project>
