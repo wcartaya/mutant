@@ -40,7 +40,7 @@ Hay que desarrollar el algoritmo de la manera más eficiente posible.
 > Anexar una base de datos, la cual guarde los ADN’s verificados con la API.
 > Solo 1 registro por ADN.
 > Exponer un servicio extra “/stats” que devuelva un Json con las estadísticas de las
-> verificaciones de ADN: {“count_mutant_dna”:40, “count_human_dna”:100: “ratio”:0.4}
+> verificaciones de ADN: {“count_mutant_dna” : 40, “count_human_dna” : 100: “ratio” : 0.4}
 > Tener en cuenta que la API puede recibir fluctuaciones agresivas de tráfico (Entre 100 y 1
 > millón de peticiones por segundo).
 
