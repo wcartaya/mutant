@@ -34,8 +34,6 @@ Hay que desarrollar el algoritmo de la manera más eficiente posible.
 > }
 > En caso de verificar un mutante, debería devolver un HTTP 200-OK, en caso contrario un
 > 403-Forbidden
-
-
 > Opcional 3:
 > Anexar una base de datos, la cual guarde los ADN’s verificados con la API.
 > Solo 1 registro por ADN.
@@ -44,7 +42,7 @@ Hay que desarrollar el algoritmo de la manera más eficiente posible.
 > Tener en cuenta que la API puede recibir fluctuaciones agresivas de tráfico (Entre 100 y 1
 > millón de peticiones por segundo).
 
-##Tecnología
+## Tecnología
 - Framework .Net Core 3
 - Lenguaje C#
 - ORM Entity Framework Core & Dapper
@@ -52,7 +50,7 @@ Hay que desarrollar el algoritmo de la manera más eficiente posible.
 - Control de Versiones: GitHub.
 - Documentación de la API: Swagger
 
-##Arquitectura
+## Arquitectura
 
 ![[Arquitectura]](https://github.com/wcartaya/mutant/blob/master/readme/arquitectura.png)
 
@@ -72,15 +70,17 @@ return await CountVerticalSecuenceTask + await CountHorizontalSecuenceTask;
 ```
 
 Adicionalmente se trata de salir de cada ciclo lo antes posible: Si se consigue el objetivo o si ya no hay pocibilidad de alcanzar la secuencia (incluso antes de llegar al final del arreglo).
+
 Para buscar las secuencias lineales se recorre la primera fila/columna (un sólo recorrido o indice de 0 hasta N-1).
 ![[Imagen lineales]](https://github.com/wcartaya/mutant/blob/master/readme/lineales.png)
+
 Para buscar las secuencias oblicuas se recorre sólo la mitad de la primera fila/columna (un sólo recorrido o indice de 0 hasta N/2).
 ![Imagen Diagonales](https://github.com/wcartaya/mutant/blob/master/readme/diagonales.png)
 
 ### Stats
 Para agilizar la consulta en la base de datos se utiliza el micro ORM Dapper, ya que es muy liviando y rápido. Es cierto que no oferece toda la funcionalidad y robustez que EntityFramework Core pero para aspectos puntuales cómo éste suele ser mas efectivo.
 
-##Rendimiento y Confiabilidad
+## Rendimiento y Confiabilidad
 Se sigue la guía de diseño:    [.Net Framework Design Guidelines](https://docs.microsoft.com/en-us/dotnet/standard/design-guidelines/), que incluye:
 [Instrucciones de nomenclatura](https://docs.microsoft.com/en-us/dotnet/standard/design-guidelines/naming-guidelines)
 [Instrucciones de diseño de tipos](https://docs.microsoft.com/en-us/dotnet/standard/design-guidelines/type)
