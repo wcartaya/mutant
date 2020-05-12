@@ -59,6 +59,10 @@ Hay que desarrollar el algoritmo de la manera más eficiente posible.
 ![[Arquitectura]](https://github.com/wcartaya/mutant/blob/master/readme/arquitectura.png)
 
 ## Desarrollo
+El código anexo tiene varias carpetas, proyectos y archivos debido a la arquitectura utilizada y las buenas prácticas de desarrollo.
+
+A continuación se explica el desarrollo delas funciones principales:
+
 
 ### IsMutant
 Para evitar recorrer muchas veces la matriz (NxN), se separaron en diferentes métodos la busqueda de cada una de las secuencias posibles: Lineal (hotizontal y vertical) y Oblicua (diagonales positivas y negativas).
@@ -76,10 +80,10 @@ return await CountVerticalSecuenceTask + await CountHorizontalSecuenceTask;
 
 Adicionalmente se trata de salir de cada ciclo lo antes posible: Si se consigue el objetivo o si ya no hay pocibilidad de alcanzar la secuencia (incluso antes de llegar al final del arreglo).
 
-Para buscar las secuencias lineales se recorre la primera fila/columna (un sólo recorrido o indice de 0 hasta N-1).
+Para buscar las secuencias lineales se recorre la primera fila/columna: un sólo recorrido de 0 hasta N-1 ó hasta lograr el objetivo (lo que ocurra antes).
 ![[Imagen lineales]](https://github.com/wcartaya/mutant/blob/master/readme/lineales.png)
 
-Para buscar las secuencias oblicuas se recorre sólo la mitad de la primera fila/columna (un sólo recorrido o indice de 0 hasta N/2).
+Para buscar las secuencias oblicuas se recorre sólo la mitad de la primera fila/columna: un sólo recorrido de 0 hasta N/2 ó hasta lograr el objetivo (lo que ocurra antes).
 ![Imagen Diagonales](https://github.com/wcartaya/mutant/blob/master/readme/diagonales.png)
 
 ### Stats
