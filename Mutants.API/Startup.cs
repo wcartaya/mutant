@@ -34,7 +34,7 @@ namespace Mutants.API
             services.AddTransient<IMutantService, MutantService>();
             services.AddScoped<IStatsRepository, StatsRepository>();
             services.AddScoped<IDataRepository<Dna>, DnaRepository>();
-            services.AddScoped<DnaValidator>();
+            services.AddScoped<IDnaValidator,DnaValidator>();
 
             services.AddMemoryCache();
             services.AddSwaggerGen(c =>

@@ -1,7 +1,5 @@
 ﻿using Mutants.Business.Dtos;
-using System;
 using System.Collections.Generic;
-using System.Text;
 
 namespace Test.Util.Stub.Dtos
 {
@@ -22,7 +20,6 @@ namespace Test.Util.Stub.Dtos
                         "ATGCGA","CAGTTC","TTGAGT","AGAAGG","ACCCTA","TCACTG"
                     })
             };
-            var a = 1;
         }
         public DnaDto GetOnPosition(int position)
         {

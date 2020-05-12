@@ -16,7 +16,7 @@ namespace Mutants.Business.Mutant
     /// </remarks>
     /// <param name="dna">Arreglo de string que representa el adn (6x6).</param>
     /// <response bool>True or False</response> 
-    public class DnaValidator
+    public class DnaValidator : IDnaValidator
     {
         /// <summary>
         /// Realiza llamadas de manera simultanea a diferentes tareas para validar si encuentra secuencia de 4 letras seguidas iguales

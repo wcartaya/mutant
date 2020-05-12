@@ -14,13 +14,13 @@ namespace Mutants.Business.Services
     public class MutantService : IMutantService
     {
         private readonly ILogger<MutantService> _logger;
-        private readonly DnaValidator _dnaValidator;
+        private readonly IDnaValidator _dnaValidator;
         private readonly IDataRepository<Dna> _dataRepository;
         private readonly IStatsRepository _statsRepository;
         private readonly IMemoryCache _cache;
         public MutantService(
-            ILogger<MutantService> logger, 
-            DnaValidator dnaValidator,
+            ILogger<MutantService> logger,
+            IDnaValidator dnaValidator,
             IDataRepository<Dna> dataRepository,
             IStatsRepository statsRepository,
             IMemoryCache cache)
