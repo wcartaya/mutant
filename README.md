@@ -50,8 +50,9 @@ Hay que desarrollar el algoritmo de la manera más eficiente posible.
 - Framework .Net Core 3
 - Lenguaje C#
 - ORM Entity Framework Core & Dapper
-- Base de Datos: SQLAzure
 - Control de Versiones: GitHub.
+- Base de Datos: Azure SQL Database
+- Servidor de aplicaciones: Azure App Services
 - Documentación de la API: Swagger
 
 ## Arquitectura
@@ -91,6 +92,15 @@ Para buscar las secuencias oblicuas se recorre sólo la mitad de la primera fila
 ### Stats
 Para agilizar la consulta en la base de datos se utiliza el micro ORM Dapper, ya que es muy liviando y rápido. Es cierto que no oferece toda la funcionalidad y robustez que EntityFramework Core pero para aspectos puntuales cómo éste suele ser mas efectivo.
 
+## API
+La documentación de la API está disponible en:  [/mutants-dev-as/swagger](https://mutants-dev-as.azurewebsites.net/swagger).
+
+Los endpoints están disponibles en:
+
+[/mutants-dev-as/mutant](https://mutants-dev-as.azurewebsites.net/mutant)
+
+[/mutants-dev-as/stats](https://mutants-dev-as.azurewebsites.net/stats)
+
 ## Rendimiento y Confiabilidad
 Se sigue la guía de diseño:    [.Net Framework Design Guidelines](https://docs.microsoft.com/en-us/dotnet/standard/design-guidelines/), que incluye:
 - [Instrucciones de nomenclatura](https://docs.microsoft.com/en-us/dotnet/standard/design-guidelines/naming-guidelines)
@@ -109,6 +119,7 @@ Se implementan prácticas recomendadas de rendimiento con ASP.NET Core.
 **Evitar llamadas de bloqueo:** ASP.NET Core aplicaciones deben diseñarse para procesar muchas solicitudes simultáneamente. Las API asincrónicas permiten que un pequeño grupo de subprocesos controle miles de solicitudes simultáneas sin esperar a que se bloqueen las llamadas. En lugar de esperar a que se complete una tarea sincrónica de ejecución prolongada, el subproceso puede funcionar en otra solicitud.
 
 **Minimizar las asignaciones de objetos grandes:** El recolector de elementos no utilizados de .net Core administra la asignación y liberación de memoria automáticamente en ASP.net Core aplicaciones. La recolección automática de elementos no utilizados normalmente significa que los desarrolladores no tienen que preocuparse de cómo o Cuándo se libera la memoria. No obstante, la limpieza de los objetos sin referencia supone tiempo de CPU, por lo que los desarrolladores deben minimizar la asignación de objetos en rutas de acceso de código activas.
+
 **Optimizar el acceso a datos y la e/s:** Las interacciones con un almacén de datos y otros servicios remotos suelen ser las partes más lentas de una aplicación ASP.NET Core. Leer y escribir datos de forma eficaz es fundamental para lograr un buen rendimiento.
 
 
