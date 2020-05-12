@@ -2,6 +2,8 @@
 Proyecto que detecta si un humano es mutante basándose en su secuencia de ADN
 
 [TOC]
+
+
 ## Enunciado:
 Magneto quiere reclutar la mayor cantidad de mutantes para poder luchar
 contra los X-Men.
@@ -17,7 +19,9 @@ Se recibe como parámetro un array de Strings que representan cada fila de una t
 Un humano es mutante, si se encuentra más de una secuencia de cuatro letras iguales, de forma oblicua, horizontal o vertical.
 
 Ejemplo (Caso mutante):
+
 String[] dna = {"ATGCGA","CAGTGC","TTATGT","AGAAGG","CCCCTA","TCACTG"};
+
 En este caso el llamado a la función isMutant(dna) devuelve “true”.
 
 ## Requerimientos
@@ -54,11 +58,12 @@ Hay que desarrollar el algoritmo de la manera más eficiente posible.
 
 ![[Arquitectura]](https://github.com/wcartaya/mutant/blob/master/readme/arquitectura.png)
 
-##Desarrollo
+## Desarrollo
 
 ### IsMutant
 Para evitar recorrer muchas veces la matriz (NxN), se separaron en diferentes métodos la busqueda de cada una de las secuencias posibles: Lineal (hotizontal y vertical) y Oblicua (diagonales positivas y negativas).
 Cada posibilidad se corre en una tarea asíncrona de manera paralela y se espera el resultado sólo cuando hace falta.
+
 Ejemplo:
 ```
 Task<int> CountVerticalSecuenceTask = CountVerticalSecuence(dna, index);
@@ -82,12 +87,12 @@ Para agilizar la consulta en la base de datos se utiliza el micro ORM Dapper, ya
 
 ## Rendimiento y Confiabilidad
 Se sigue la guía de diseño:    [.Net Framework Design Guidelines](https://docs.microsoft.com/en-us/dotnet/standard/design-guidelines/), que incluye:
-[Instrucciones de nomenclatura](https://docs.microsoft.com/en-us/dotnet/standard/design-guidelines/naming-guidelines)
-[Instrucciones de diseño de tipos](https://docs.microsoft.com/en-us/dotnet/standard/design-guidelines/type)
-[Instrucciones de diseño de miembros](https://docs.microsoft.com/en-us/dotnet/standard/design-guidelines/member)
-[Diseño de extensibilidad](https://docs.microsoft.com/en-us/dotnet/standard/design-guidelines/designing-for-extensibility)
-[Instrucciones de uso](https://docs.microsoft.com/en-us/dotnet/standard/design-guidelines/usage-guidelines)
-[Patrones de diseño comunes](https://docs.microsoft.com/en-us/dotnet/standard/design-guidelines/common-design-patterns)
+- [Instrucciones de nomenclatura](https://docs.microsoft.com/en-us/dotnet/standard/design-guidelines/naming-guidelines)
+- [Instrucciones de diseño de tipos](https://docs.microsoft.com/en-us/dotnet/standard/design-guidelines/type)
+- [Instrucciones de diseño de miembros](https://docs.microsoft.com/en-us/dotnet/standard/design-guidelines/member)
+- [Diseño de extensibilidad](https://docs.microsoft.com/en-us/dotnet/standard/design-guidelines/designing-for-extensibility)
+- [Instrucciones de uso](https://docs.microsoft.com/en-us/dotnet/standard/design-guidelines/usage-guidelines)
+- [Patrones de diseño comunes](https://docs.microsoft.com/en-us/dotnet/standard/design-guidelines/common-design-patterns)
 
 Se implementan prácticas recomendadas de rendimiento con ASP.NET Core.
 
