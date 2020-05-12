@@ -57,7 +57,7 @@ Hay que desarrollar el algoritmo de la manera más eficiente posible.
 
 ## Arquitectura
 
-![[Arquitectura]](https://github.com/wcartaya/mutant/blob/master/readme/arquitectura.png)
+![[Arquitectura]](https://github.com/wcartaya/mutant/blob/master/readme/arquitectura_software.png)
 
 ## Desarrollo
 El código anexo tiene varias carpetas, proyectos y archivos debido a la arquitectura utilizada y las buenas prácticas de desarrollo.
