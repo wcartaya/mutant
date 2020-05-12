@@ -12,7 +12,7 @@ bool isMutant(String[] dna);
 
 Se recibe como parámetro un array de Strings que representan cada fila de una tabla de (NxN) con la secuencia del ADN. Las letras de los Strings solo pueden ser:  (A,T,C,G), las cuales representa cada base nitrogenada del ADN.
 
-![Imagen de ejemplo](https://github.com/wcartaya/mutant/readme/ejemplo.png)
+![Imagen de ejemplo](https://github.com/wcartaya/mutant/blob/master/readme/ejemplo.png)
 
 Un humano es mutante, si se encuentra más de una secuencia de cuatro letras iguales, de forma oblicua, horizontal o vertical.
 
@@ -54,7 +54,7 @@ Hay que desarrollar el algoritmo de la manera más eficiente posible.
 
 ##Arquitectura
 
-![[Arquitectura]](https://github.com/wcartaya/mutant/readme/arquitectura.png)
+![[Arquitectura]](https://github.com/wcartaya/mutant/blob/master/readme/arquitectura.png)
 
 ##Desarrollo
 
@@ -73,9 +73,9 @@ return await CountVerticalSecuenceTask + await CountHorizontalSecuenceTask;
 
 Adicionalmente se trata de salir de cada ciclo lo antes posible: Si se consigue el objetivo o si ya no hay pocibilidad de alcanzar la secuencia (incluso antes de llegar al final del arreglo).
 Para buscar las secuencias lineales se recorre la primera fila/columna (un sólo recorrido o indice de 0 hasta N-1).
-![[Imagen lineales]](https://github.com/wcartaya/mutant/readme/lineales.png)
+![[Imagen lineales]](https://github.com/wcartaya/mutant/blob/master/readme/lineales.png)
 Para buscar las secuencias oblicuas se recorre sólo la mitad de la primera fila/columna (un sólo recorrido o indice de 0 hasta N/2).
-![Imagen Diagonales](https://github.com/wcartaya/mutant/readme/diagonales.png)
+![Imagen Diagonales](https://github.com/wcartaya/mutant/blob/master/readme/diagonales.png)
 
 ### Stats
 Para agilizar la consulta en la base de datos se utiliza el micro ORM Dapper, ya que es muy liviando y rápido. Es cierto que no oferece toda la funcionalidad y robustez que EntityFramework Core pero para aspectos puntuales cómo éste suele ser mas efectivo.
