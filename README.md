@@ -93,16 +93,16 @@ Los diferentes métodos de búsqueda de secuencias se implementaron siguiento el
 
 ### Stats
 Para agilizar la consulta en la base de datos se utiliza el micro ORM Dapper, ya que es muy liviando y rápido. Es cierto que no oferece toda la funcionalidad y robustez que EntityFramework Core pero para aspectos puntuales cómo éste suele ser mas efectivo.
-También se implementó Cache InMemory, para una respuesta mucho más rápida. El manejo de cache hay que configurarlo adecuadamente dependiendo del requerimiento de uso real. Para mejorar la performance se puede implementar una BD NoSQl de acceso rápido sólo para consultar éstas estadísticas.
+También se implementó Cache InMemory, para una respuesta mucho más rápida. El manejo de cache hay que configurarlo adecuadamente dependiendo del requerimiento de uso real (ahorita está en 5 segundos). Para mejorar la performance se puede implementar una BD NoSQl de acceso rápido sólo para consultar éstas estadísticas.
 
 ## API
-La documentación de la API está disponible en:  [/mutants-dev-as/swagger](https://mutants-dev-as.azurewebsites.net/swagger).
+La documentación de la API está disponible en:  [https://mutants-dev-as.azurewebsites.net/swagger](https://mutants-dev-as.azurewebsites.net/swagger).
 
 Los endpoints están disponibles en:
 
-[/mutants-dev-as/mutant](https://mutants-dev-as.azurewebsites.net/mutant)
+[https://mutants-dev-as.azurewebsites.net/mutant](https://mutants-dev-as.azurewebsites.net/mutant)
 
-[/mutants-dev-as/stats](https://mutants-dev-as.azurewebsites.net/stats)
+[https://mutants-dev-as.azurewebsites.net/stats](https://mutants-dev-as.azurewebsites.net/stats)
 
 ## Rendimiento y Confiabilidad
 Se sigue la guía de diseño:    [.Net Framework Design Guidelines](https://docs.microsoft.com/en-us/dotnet/standard/design-guidelines/), que incluye:
